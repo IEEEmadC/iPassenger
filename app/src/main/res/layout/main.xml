@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.harin.firebase_crud.Main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_TextInputLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="300dp"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/TextView_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hi, Welcome to iPassenger."
+            android:textSize="22dp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:singleLine="true"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_TextInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="360dp"
+        android:padding="25dp">
+
+        <Button
+            android:id="@+id/btn_locate_busses"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_x="0dp"
+            android:layout_y="0dp"
+            android:text="Locate Buses"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="#27AE60"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_TextInputLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="440dp"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/TextView_driver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Are you a driver? Use the link below."
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:textColor="#000000"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_TextInputLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="470dp"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/tv_driver_interface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/driver"
+            android:textSize="22dp"
+            android:textAlignment="center"
+            android:textColor="#2471A3"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_weight="0.6"
+        android:layout_x="0dp"
+        android:layout_y="40dp"
+        app:srcCompat="@drawable/icon" />
+
+</android.widget.AbsoluteLayout>

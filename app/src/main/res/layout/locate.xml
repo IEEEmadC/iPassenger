@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.harin.firebase_crud.Locate"
+    android:orientation="vertical"
+    android:name="com.google.android.gms.maps.SupportMapFragment">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        tools:context="com.example.harin.firebase_crud.Map" >
+    </fragment>
+
+    <EditText
+        android:id="@+id/et_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:hint="Enter Route"
+        android:orientation="horizontal"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        tools:layout_X="113dp"
+        tools:layout_Y="600dp" />
+
+    <Button
+        android:id="@+id/btn_search_route"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0"
+        android:background="#000000"
+        android:text="Search"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+</LinearLayout>

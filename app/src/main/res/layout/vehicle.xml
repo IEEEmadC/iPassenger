@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="40dp"
+        android:text="Your Vehicle"
+        android:textSize="25dp"
+        android:padding="25dp"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="100dp"
+        android:padding="25dp">
+
+        <EditText
+            android:id="@+id/et_registration_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Registration Number"
+            android:textSize="20dp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_TextInputLayout21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="160dp"
+        android:padding="25dp">
+
+        <EditText
+            android:id="@+id/et_route_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Route Number"
+            android:textSize="20dp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_TextInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="240dp"
+        android:padding="25dp">
+
+        <Button
+            android:id="@+id/Button_addVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_x="0dp"
+            android:layout_y="0dp"
+            android:text="Add"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="#2471A3"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+</android.widget.AbsoluteLayout>
