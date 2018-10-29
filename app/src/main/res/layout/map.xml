@@ -29,6 +29,17 @@
         android:scaleY="1.5"
         android:theme="@style/SwitchTheme"/>
 
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0"
+        android:background="#000000"
+        android:text="Logout"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
 </LinearLayout>
 
 

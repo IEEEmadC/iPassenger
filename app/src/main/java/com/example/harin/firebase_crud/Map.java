@@ -12,6 +12,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -43,7 +45,6 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private LatLng myLocation;
-    private android.location.Location mCurrentLocation;
 
     private LocationRequest mLocationRequest;
     private LocationCallback mLocationCallback;
@@ -58,6 +59,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
     private String mobile;
 
     private Switch switch_visibility;
+    private Button btn_logout;
 
 
     @Override
@@ -68,6 +70,13 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        //Set database
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference("/users/" + mobile + "/location/");
+
+        switch_visibility=(Switch)findViewById(R.id.switch_visibility);
+        btn_logout=(Button)findViewById(R.id.btn_logout);
 
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -80,7 +89,6 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
         mobile=intent.getStringExtra("mobile");
 
         //Set switch
-        switch_visibility=(Switch)findViewById(R.id.switch_visibility);
         switch_visibility.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -93,6 +101,20 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
                     switch_visibility.setText("Go Online");
                     Log.d("msg:","sendCoordinates=false");
                 }
+                reference.child("visibility").setValue(sendCoordinates);
+            }
+        });
+
+        //Set logout
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCoordinates=false;
+                reference.child("visibility").setValue(sendCoordinates);
+
+                Intent intent=new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -108,7 +130,6 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
                     if (location != null) {
                         // Logic to handle location object
                         mMap.clear();
-                        mCurrentLocation = location;
                         myLocation = new LatLng(location.getLatitude(), location.getLongitude());
                         mMap.addMarker(new MarkerOptions().position(myLocation).title("You'r here"));
                     } else {
@@ -125,23 +146,23 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
                 if (locationResult == null) {
                     return;
                 }
+
+                //Set database values
                 for (android.location.Location location : locationResult.getLocations()) {
-                    // Update UI with location data
+                    // Set current location on the map
                     mMap.clear();
-                    mCurrentLocation = location;
                     myLocation = new LatLng(location.getLatitude(), location.getLongitude());
                     mMap.addMarker(new MarkerOptions().position(myLocation).title("You'r here").icon(BitmapDescriptorFactory.fromResource(R.drawable.bus)));
 
-                    //Set camera focus
+                    //Set camera focus once on the map
                     if(setCamera){
+                        mMap.clear();
                         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 15));
                         mMap.addMarker(new MarkerOptions().position(myLocation).title("You'r here").icon(BitmapDescriptorFactory.fromResource(R.drawable.bus))).showInfoWindow();
                         setCamera=false;
                     }
 
-                    //Send coordinates to firebase database
-                    database = FirebaseDatabase.getInstance();
-                    reference = database.getReference("/users/" + mobile + "/location/");
+                    //Send coordinates to fire-base database
                     reference.child("visibility").setValue(sendCoordinates);
                     if(sendCoordinates) {
                         reference.child("latitude").setValue(location.getLatitude());

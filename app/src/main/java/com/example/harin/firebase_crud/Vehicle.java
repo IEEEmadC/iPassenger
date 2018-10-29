@@ -32,6 +32,9 @@ public class Vehicle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vehicle);
 
+        database=FirebaseDatabase.getInstance();
+        reference=database.getReference("/users/"+mobile+"/vehicle");
+
         et_registration_no=(EditText)findViewById(R.id.et_registration_no);
         et_route_no=(EditText)findViewById(R.id.et_route_no);
         btn_addVehicle=(Button)findViewById(R.id.Button_addVehicle);
@@ -42,7 +45,7 @@ public class Vehicle extends AppCompatActivity {
         btn_addVehicle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //set values
+                //Set values on variables
                 setValues();
                 if(!(registration_no.equals("")||route_no.equals(""))) {
                     //Register user's vehicle
@@ -61,15 +64,13 @@ public class Vehicle extends AppCompatActivity {
     }
 
     private void setValues() {
+        //Set values on variables
         registration_no=et_registration_no.getText().toString();
         route_no=et_route_no.getText().toString();
     }
 
     protected void registerVehicle(){
         //Registering user's vehicle
-        database=FirebaseDatabase.getInstance();
-        //users/mobile/vehicle/
-        reference=database.getReference("/users/"+mobile+"/vehicle");
         reference.child("registration_no").setValue(registration_no);
         reference.child("route_no").setValue(route_no);
     }

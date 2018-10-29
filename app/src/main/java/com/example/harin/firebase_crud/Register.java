@@ -40,6 +40,9 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
+        database=FirebaseDatabase.getInstance();
+        reference=database.getReference("/users");
+
         et_name=(EditText)findViewById(R.id.et_name);
         et_nic=(EditText)findViewById(R.id.et_nic);
         et_email=(EditText)findViewById(R.id.et_email);
@@ -55,8 +58,6 @@ public class Register extends AppCompatActivity {
                 //set values
                 setValues();
                 //Register user
-                database=FirebaseDatabase.getInstance();
-                reference=database.getReference("/users");
 
                 reference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override

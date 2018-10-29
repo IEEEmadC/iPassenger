@@ -59,6 +59,10 @@ public class Locate extends FragmentActivity implements OnMapReadyCallback {
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        //Database instance
+        database=FirebaseDatabase.getInstance();
+        reference=database.getReference("/users");
+
         btn_search_route=(Button) findViewById(R.id.btn_search_route);
         et_route=(EditText) findViewById(R.id.et_route);
 
@@ -69,14 +73,14 @@ public class Locate extends FragmentActivity implements OnMapReadyCallback {
         mLocationRequest.setFastestInterval(5000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
-        //map update every 2 second
+        //map update every 5 second
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while(threadState) {
                     locateBuses();
                     try {
-                        Thread.sleep(2000);
+                        Thread.sleep(5000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -151,8 +155,6 @@ public class Locate extends FragmentActivity implements OnMapReadyCallback {
 
     private void locateBuses(){
         Log.d("Count " ,"inside locateBuses()");
-        database=FirebaseDatabase.getInstance();
-        reference=database.getReference("/users");
 
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

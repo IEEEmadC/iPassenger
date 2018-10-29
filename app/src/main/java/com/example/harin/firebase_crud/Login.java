@@ -36,6 +36,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        database=FirebaseDatabase.getInstance();
+        reference=database.getReference("/users");
+
         et_mobile=(EditText) findViewById(R.id.et_mobile_login);
         et_password=(EditText) findViewById(R.id.et_password_login);
 
@@ -68,9 +71,6 @@ public class Login extends AppCompatActivity {
     }
 
     private void authenticateUser() {
-        database=FirebaseDatabase.getInstance();
-        reference=database.getReference("/users");
-
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
