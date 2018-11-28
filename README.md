@@ -10,9 +10,9 @@ This is an idea that has not been implemented in the country up to now. At the m
 
 Technologies
 
-Supported Platform	:	  Android 		                              | Minimum SDK Version 21
-Database		        : 	Firebase		                              | Firebase API
-API’s			          :	  Google Maps API and Google Play Services.
+Supported Platform	:	Android 		                              | Minimum SDK Version 21
+Database		:	Firebase		                              | Firebase API
+API’s			:	Google Maps API and Google Play Services.
 
 Functionalities > Passenger
 
