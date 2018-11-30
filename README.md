@@ -1,8 +1,8 @@
 # iPassenger
 
-Youtube Link 	: https://youtu.be/2qDvwSi9QaA
-Team Name	: Team Trek
-App File Name 	: iPassenger
+Youtube Link 	: https://youtu.be/2qDvwSi9QaA  
+Team Name	: Team Trek  
+App File Name 	: iPassenger  
 Description	: An sample application to live track buses by passengers in Sri Lanka
 Licence		: GNU GPLv3 
 County		: Sri Lanka
