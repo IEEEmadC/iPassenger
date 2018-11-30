@@ -11,4 +11,10 @@
 
     <color name="white">#ffffff</color>
 
+    <color name="button_background">#060028</color>
+    <color name="button_text">#ffffff</color>
+
+    <color name="link_blue"></color>
+    <color name="link_green"></color>
+
 </resources>

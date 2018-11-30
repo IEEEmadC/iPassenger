@@ -20,25 +20,27 @@
         android:id="@+id/switch_visibility"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go Online"
+        android:text="Go Online   "
         tools:layout_X="113dp"
         tools:layout_Y="600dp"
         android:layout_gravity="center"
-        android:padding="25dp"
-        android:scaleX="1.5"
-        android:scaleY="1.5"
+        android:paddingTop="20dp"
+        android:paddingBottom="15dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
         android:theme="@style/SwitchTheme"/>
 
     <Button
         android:id="@+id/btn_logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="0"
-        android:background="#000000"
         android:text="Logout"
-        android:textColor="#ffffff"
-        android:textSize="18dp" />
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:textColor="@color/button_text"
+        android:background="@color/button_background"
+        android:textSize="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:textAllCaps="false" />
 
 </LinearLayout>
 

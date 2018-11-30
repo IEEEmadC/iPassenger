@@ -71,6 +71,10 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        //Set mobile number
+        intent=getIntent();
+        mobile=intent.getStringExtra("mobile");
+
         //Set database
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("/users/" + mobile + "/location/");
@@ -85,9 +89,6 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
         mLocationRequest.setFastestInterval(5000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
-        intent=getIntent();
-        mobile=intent.getStringExtra("mobile");
-
         //Set switch
         switch_visibility.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -96,10 +97,12 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
                     sendCoordinates=true;
                     switch_visibility.setText("Online");
                     Log.d("msg:","sendCoordinates=true");
+                    //Toast.makeText(getApplicationContext(),"You are online",Toast.LENGTH_SHORT).show();
                 }else{
                     sendCoordinates=false;
                     switch_visibility.setText("Go Online");
                     Log.d("msg:","sendCoordinates=false");
+                    //Toast.makeText(getApplicationContext(),"You are offline",Toast.LENGTH_SHORT).show();
                 }
                 reference.child("visibility").setValue(sendCoordinates);
             }

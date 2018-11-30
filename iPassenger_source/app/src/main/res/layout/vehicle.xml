@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.widget.AbsoluteLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
 
     <TextView
         android:id="@+id/textView"
@@ -28,8 +29,8 @@
             android:id="@+id/et_registration_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Registration Number"
-            android:textSize="20dp" />
+            android:hint="Registration number"
+            android:textSize="16dp" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -45,8 +46,8 @@
             android:id="@+id/et_route_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Route Number"
-            android:textSize="20dp" />
+            android:hint="Route number"
+            android:textSize="16dp" />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -60,14 +61,15 @@
 
         <Button
             android:id="@+id/Button_addVehicle"
+            android:text="Register Vehicle"
+            android:layout_height="50dp"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_x="0dp"
-            android:layout_y="0dp"
-            android:text="Add"
+            android:textColor="@color/button_text"
+            android:background="@color/button_background"
             android:textSize="20dp"
-            android:textColor="#ffffff"
-            android:background="#2471A3"/>
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="0dp"
+            android:textAllCaps="false"/>
 
     </android.support.design.widget.TextInputLayout>
 

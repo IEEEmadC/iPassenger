@@ -11,14 +11,14 @@
         <LinearLayout
             android:layout_weight="1"
             android:layout_height="fill_parent"
-            android:layout_width="0dp">
+            android:layout_width="0dp"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="40dp"
-                android:layout_weight="0.6"
+                android:layout_margin="15dp"
                 app:srcCompat="@drawable/icon" />
 
         </LinearLayout>
@@ -62,8 +62,8 @@
                 android:layout_x="0dp"
                 android:layout_y="0dp"
                 android:text="Login"
-                android:textColor="#ffffff"
-                android:background="#1e9df7"
+                android:textColor="@color/button_text"
+                android:background="@color/button_background"
                 android:textSize="20dp"
                 android:layout_marginVertical="5dp"
                 android:layout_marginHorizontal="25dp"

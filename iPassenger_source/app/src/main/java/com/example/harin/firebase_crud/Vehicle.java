@@ -32,15 +32,15 @@ public class Vehicle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vehicle);
 
+        intent=getIntent();
+        mobile=intent.getStringExtra("mobile");
+
         database=FirebaseDatabase.getInstance();
         reference=database.getReference("/users/"+mobile+"/vehicle");
 
         et_registration_no=(EditText)findViewById(R.id.et_registration_no);
         et_route_no=(EditText)findViewById(R.id.et_route_no);
         btn_addVehicle=(Button)findViewById(R.id.Button_addVehicle);
-
-        intent=getIntent();
-        mobile=intent.getStringExtra("mobile");
 
         btn_addVehicle.setOnClickListener(new View.OnClickListener() {
             @Override

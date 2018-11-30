@@ -80,7 +80,7 @@ public class Locate extends FragmentActivity implements OnMapReadyCallback {
                 while(threadState) {
                     locateBuses();
                     try {
-                        Thread.sleep(5000);
+                        Thread.sleep(4000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
