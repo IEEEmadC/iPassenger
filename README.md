@@ -3,10 +3,10 @@
 Youtube Link 	: https://youtu.be/2qDvwSi9QaA  
 Team Name	: Team Trek  
 App File Name 	: iPassenger  
-Description	: An sample application to live track buses by passengers in Sri Lanka
-Licence		: GNU GPLv3 
-County		: Sri Lanka
-Authors		: Harin Samaranayake, Angathan Nasarasa, Amanda Wijewickrama | https://github.com/harinsamaranayake
+Description	: An sample application to live track buses by passengers in Sri Lanka.  
+Licence		: GNU GPLv3   
+County		: Sri Lanka  
+Authors		: Harin Samaranayake, Angathan Nasarasa, Amanda Wijewickrama | https://github.com/harinsamaranayake  
 
 *This is a sample application and maximum number of connections to the firebase-database should be 100.
 
@@ -18,13 +18,13 @@ Therefore, with the thought of improving public transport and societal well bein
 
 This is an idea that has not been implemented in the country up to now. At the moment we have added the following functionalities to the application with the intention of improving them in the near future.
 
-Technologies
+Technologies  
 
-Supported Platform	:	Android 		                              | Minimum SDK Version 21
-Database		:	Firebase		                              | Firebase API
-API’s			:	Google Maps API and Google Play Services.
+Supported Platform	:	Android 		                              | Minimum SDK Version 21  
+Database		:	Firebase		                              | Firebase API  
+API’s			:	Google Maps API and Google Play Services.  
 
-Functionalities > Passenger
+Functionalities > Passenger  
 
 01. Locating passengers current location.
 
@@ -52,7 +52,7 @@ Functionalities > Passenger
 
     Optimal path which the user should take to reach the bus will pop up.	
 
-Functionalities > Driver
+Functionalities > Driver  
 
 01. Register
 	
