@@ -1,16 +1,18 @@
 # iPassenger
 
 Youtube Link 	: https://youtu.be/2qDvwSi9QaA  
+
 Team Name	: Team Trek  
 App File Name 	: iPassenger  
-Description	: An sample application to live track buses by passengers in Sri Lanka.  
+Description	: An application to live track buses by passengers in Sri Lanka.  
 Licence		: GNU GPLv3   
 County		: Sri Lanka  
+
 Authors		: Harin Samaranayake, Angathan Nasarasa, Amanda Wijewickrama | https://github.com/harinsamaranayake  
 
-*This is a sample application and maximum number of connections to the firebase-database should be 100.
+*This is a sample application. Maximum number of concurrent connections to the firebase-database is limited to 100.
 
-We are a team of undergraduates from Sri Lanka who envision to improve the standards of public transportation immensely, through reducing the wait time for both the public transportation mode and the passenger. At the same time, we intend to make a contribution in reducing congestion in and around the main cities, saving many productive man hours spent on maneuvering through traffic. 
+We are a team of undergraduates from Sri Lanka who envision to improve the standards of public transportation within the country, through reducing the wait time for both the public transportation mode and the passenger. At the same time, we intend to make a contribution in reducing congestion in and around the main cities, saving many productive man hours spent on maneuvering through traffic. 
 
 Buses are the main form of public transportation within the country. We have identified a common problem people face with regards to public transport. In urban areas due to lack of usage of public transportation congestion on roads has increased. Similarly in rural areas, the buses are few and far between. Providing a calculation of the estimated arrival time of a bus will be useful in reducing the time people spend  waiting at bus stations for a bus to arrive, especially the unpopular bus routes. It also ensures that the buses do not need to spend a lot of time at the bus station for the vehicle to fill up, which in turn would keep traffic moving in the bus lanes. 
 
@@ -18,13 +20,13 @@ Therefore, with the thought of improving public transport and societal well bein
 
 This is an idea that has not been implemented in the country up to now. At the moment we have added the following functionalities to the application with the intention of improving them in the near future.
 
-Technologies  
+**Technologies**  
 
 Supported Platform	:	Android 		                              | Minimum SDK Version 21  
 Database		:	Firebase		                              | Firebase API  
 API’s			:	Google Maps API and Google Play Services.  
 
-Functionalities > Passenger  
+**Functionalities > Passenger**  
 
 01. Locating passengers current location.
 
@@ -36,23 +38,23 @@ Functionalities > Passenger
 
 03. Obtaining details of each bus.
 
-    ‘Home’ interface > Click  ‘Locate Buses’ button > ‘Map’ interface > ‘Bus Pointer’ on the map > Click on specific ‘Bus Pointer’
+    ‘Home’ interface > Click ‘Locate Buses’ button > ‘Map’ interface > ‘Bus Pointer’ on the map > Click on specific ‘Bus Pointer’
 
-    Route number and the Number plate of the bus will be displayed.	
+    *Route number and the Number plate of the bus will be displayed.*	
 
 04. Locating busses of a selected route.
 
     ‘Home’ interface > Click ‘Locate Buses’ button > ‘Map’ interface > Enter specific route in ‘Enter Route’ > Click ‘Search’ button.
 
-    Buses which runs only on that route will filtered and displayed on the map.
+    *Buses which runs only on that route will filtered and displayed on the map.*
 
 05. Reaching a bus from current location
 
-    ‘Home’ interface >Click  ‘Locate Buses’ button > ‘Map’ interface > ‘Bus Pointer’ on the map > Click on specific ‘Bus Pointer’ >     Click on the ‘Navigator’ icon which pops up on the screen. 
+    ‘Home’ interface > Click  ‘Locate Buses’ button > ‘Map’ interface > ‘Bus Pointer’ on the map > Click on specific ‘Bus Pointer’ >     Click on the ‘Navigator’ icon which pops up on the screen. 
 
-    Optimal path which the user should take to reach the bus will pop up.	
+    *Optimal path which the user should take to reach the bus will pop up.*	
 
-Functionalities > Driver  
+**Functionalities > Driver**  
 
 01. Register
 	
